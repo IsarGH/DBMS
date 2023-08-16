@@ -1,0 +1,23 @@
+Create Table Record (id int, department varchar (20), Salary decimal)
+Insert Into Record Values (1, 'Computer',20000)
+Insert Into Record Values (2, 'Civil',18000)
+Insert Into Record Values (3, 'IT',25000)
+Insert Into Record Values (5, 'Computer',35000)
+Insert Into Record Values (1, 'IT',20000)
+Insert Into Record Values (1, 'Civil',22000)
+select * from Record
+create view R_View as select id,department from record
+select * from R_View
+insert into R_View
+drop view R_View 
+update Record set id=1 where salary=25000
+update Record set id=2 where salary=18000
+update Record set id=3 where salary=30000
+update Record set id=4 where salary=22000
+delete record where salary=20000
+
+create view R_View as select id,department from record
+select * from R_View
+insert into R_View Values (6,'civil')
+delete R_View where id=6
+drop view R_View

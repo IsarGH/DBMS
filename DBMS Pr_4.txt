@@ -1,0 +1,16 @@
+create table course (course_id int PRIMARY KEY,course_name varchar(20))
+insert into course values (1,'Computer')
+insert into course values (2,'IT')
+insert into course values (3,'Computer')
+insert into course values (4,'Civil')
+insert into course values (5,'IT')
+create table student (Student_id int PRIMARY KEY,Student_name varchar(20))  
+insert into student values (01,'Isar')
+insert into student values (02,'Abulrhman')
+insert into student values (03,'Shazman')
+insert into student values (04,'Danish')
+insert into student values (05,'Hassan')
+select * from student
+delete student where student_id=1
+delete course where course_id=1
+link int,FOREGIN key(link) references course(course_id)

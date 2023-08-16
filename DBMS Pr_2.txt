@@ -1,0 +1,12 @@
+create table employee_2 (emp_id int,imp_name varchar(20),department varchar(20),salary int)
+insert into employee_2 values (1,'Isar','Computer','10000')
+insert into employee_2 values (2,'Abdulrahamn','IT','10000')
+insert into employee_2 values (3,'Hassan','Civil','10000')
+insert into employee_2 values (4,'Danish','Computer','10000')
+insert into employee_2 values (5,'Shazman','IT','10000')
+select * from employee_2
+select * from employee_2 where salary < 10000
+update employee_2 set salary = 40000 where Emp_ID=6
+delete from employee_2 where Emp_ID=1
+select * from employee_2 where salary<=30000
+

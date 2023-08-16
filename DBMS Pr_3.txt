@@ -1,0 +1,27 @@
+Create table Dept_new(Id int primary key, Name varchar(30))
+insert into Dept_new values(01, 'IT')
+insert into Dept_new values(02, 'Sales')
+insert into Dept_new values(03, 'Management')
+select * from Dept_new
+
+Create table Emp_new (Id int primary key, Name varchar(30), link int, FOREIGN KEY (link) REFERENCES Dept_new(Id))  -- creating foreign key from Department table to Employee table
+DESC Employee
+INSERT INTO Employee values(01, 'Jobs', 01)
+
+Select * from Emp_new 
+
+Insert into Emp_new values(02, 'Jobs', 02)
+
+Insert into Emp_new values(03, 'Mark', 03)
+
+Insert into Emp_new values(04, 'Pooter', 01)
+
+Insert into Emp_new values(05, 'Tony', 03)
+
+INSERT INTO Employee values(06, 'Deep', 02)
+Z  
+Select * from Emp_new
+
+DELETE FROM Employee WHERE ID = 1     -- (Deleting from child record) No error
+
+DELETE FROM Department WHERE Id = 02  -- (Deleting from parent record) integrity constraint error
