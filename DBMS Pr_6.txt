@@ -1,0 +1,30 @@
+CREATE TABLE Std (roll_no int,Name varchar(20),Address varchar(20),Phone_no int);
+
+insert INTO Std values (27,'Isar','Nayapura',9876543210);
+
+insert INTO Std values (26,'Danish','colony',9876547210);
+
+insert INTO Std values (1,'Abdulrhman','Islampura',9896347210);
+
+insert INTO Std values (21,'Numair','Nayapura',8196347210);
+
+insert INTO Std values (42,'Hassan','Md road',8147847210);
+
+//inner join
+SELECT std.roll_no,std.name,std.address,std.phone_no
+from course
+INNER JOIN
+on std.std.roll_no=course.roll_no
+
+//left join
+SELECT std.roll_no,std.Name,std.Address,std.Phone_no
+from std
+LEFT JOIN course
+on std.roll_no=course.roll_no;
+
+//right join
+SELECT std.roll_no,std.Name,std.Address,std.Phone_no
+from std
+RIGHT JOIN course
+on std.roll_no=course.roll_no;
+
