@@ -1,0 +1,43 @@
+Declare
+a int :=a;
+b int :=b;
+c int;
+begin
+c:=a+b;
+dbms_output.put_line(c);
+end
+
+
+Declare
+a int :=:a;
+b int :=:b;
+c int;
+begin
+c:=a+b;
+dbms_output.put_line(c);
+end
+
+create table emp_3 (id int,name varchar2(20),salary int);
+insert into emp_3 values (1,'ABC',10000);
+insert into emp_3 values (2,'XYZ',15000);
+insert into emp_3 values (3,'LMN',20000);
+insert into emp_3 values (4,'OPQ',25000);
+insert into emp_3 values (5,'RST',30000);
+
+select * from emp_3
+
+declare
+idd int:=:idd;
+d_salary int;
+begin
+select salary into d_salary
+from emp_3
+where id=idd;
+dbms_output.put_line(d_salary);
+d_salary:=d_salary * 1000;
+update emp_3
+set salary=d_salary
+where id=idd;
+dbms_output.put_line(d_salary);
+end
+select * from emp_3
