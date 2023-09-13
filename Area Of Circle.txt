@@ -1,0 +1,29 @@
+Area Of Circle
+
+create table Area_2(Radius float, Area float)
+Declare
+v_Area float;
+v_Radius float;
+Begin
+For v_Radius In 5..9 Loop
+v_Area:=3.14*v_Radius*v_Radius;
+insert into Area_2 values(v_Radius,v_Area);
+End Loop;
+End
+select * from Area_2
+
+
+
+
+// 
+Create table circle (area decimal,radius decimal)
+Declare
+area decimal;
+radius decimal;
+pi := 3.14;
+Begin
+For radius in 5 .. 9 loop
+area := pi*radius*radius;
+dbms_output.put_line(area);
+insert into circle values ()
+
